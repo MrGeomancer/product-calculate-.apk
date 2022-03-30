@@ -107,7 +107,7 @@ class Container(FloatLayout):
                 self.kurs.text = 'Курс сейчас: %s тенге за 1 рубль' % (z)
                 try:
                     self.con.color = (0, 0, 0, .8)
-                    self.con.text = str(round(rub * float(z))) + ' рублей'
+                    self.con.text = str(round(rub * float(z))) + ' тенге'
                 except:
                     self.con.text = 'Ошибка'
                     self.con.color = (1, 0, 0, 1)
