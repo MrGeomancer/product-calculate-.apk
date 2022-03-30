@@ -1,0 +1,184 @@
+<Container>:
+    pg: pg
+    pr: pr
+    vg: vg
+    vr: vr
+    res: res
+    res2: res2
+    img: img
+    kurs: kurs
+    con: con
+    ru: ru
+    canvas.before:
+        Color:
+            rgba: 0.8, 0.8, 0.8, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Button:
+        text: 'Расчитать'
+        font_size: sp(16)
+        on_release: root.resultat()
+        size_hint: (0.8, 0.05)
+        pos_hint: {'center_x':.5, 'top':.78}
+
+    Label:
+        color: (0,0,0,.6)
+        text: 'Первый продукт'
+        font_size: sp(18)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.21,"center_y":.975}
+
+    TextInput:
+        id: pg
+        size_hint: (0.2, 0.05)
+        pos_hint: {'center_x':.15, 'top':.94}
+        multiline: 0
+        font_size: sp(24)
+        haling: 'right'
+        cursor_color: 0,0,0,1
+        foreground_color: 0.58,.58,.58,1
+        input_filter: 'float'
+
+    TextInput:
+        id: pr
+        size_hint: (0.2, 0.025)
+        pos_hint: {'center_x':.15, 'top':.84}
+        multiline: 0
+        font_size: sp(18)
+        cursor_color: 0,0,0,1
+        foreground_color: 0.58,.58,.58,1
+        input_filter: 'float'
+
+    TextInput:
+        id: vg
+        size_hint: (0.2, 0.025)
+        pos_hint: {'center_x':.72, 'top':.94}
+        multiline: 0
+        font_size: sp(18)
+        cursor_color: 0,0,0,1
+        foreground_color: 0.58,.58,.58,1
+        input_filter: 'float'
+
+    TextInput:
+        id: vr
+        size_hint: (0.2, 0.025)
+        pos_hint: {'center_x':.72, 'top':.84}
+        multiline: 0
+        font_size: sp(18)
+        cursor_color: 0,0,0,1
+        foreground_color: 0.58,.58,.58,1
+        input_filter: 'float'
+
+    Label:
+        color: (0,0,0,.9)
+        text: 'грамм'
+        font_size: sp(16)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.33,"center_y":.928}
+
+    Label:
+        color: (0,0,0,.9)
+        text: 'рублей'
+        font_size: sp(16)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.33,"center_y":.828}
+
+    Label:
+        color: (0,0,0,.6)
+        text: 'Второй продукт'
+        font_size: sp(18)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.76,"center_y":.975}
+
+    Label:
+        color: (0,0,0,.9)
+        text: 'грамм'
+        font_size: sp(16)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.9,"center_y":.928}
+
+    Label:
+        color: (0,0,0,.9)
+        text: 'рублей'
+        font_size: sp(16)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.9,"center_y":.828}
+
+    Label:
+        id: res
+        color: (0,0,0,.9)
+        text: ''
+        font_size: sp(18)
+        size_hint: (0.8, 0.05)
+        halign: 'center'
+        pos_hint: {"center_x":.5,"center_y":.65}
+
+    Label:
+        id: res2
+        color: (0,0,0,.9)
+        text: ''
+        font_size: sp(18)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.5,"center_y":.55}
+    Image:
+        id: img
+        source: ''
+        size_hint_x: 0.15
+        allow_stretch: True
+        pos_hint: {"center_x":.9,"center_y":.55}
+        color: (1, 1, 1, 0)
+
+    Label:
+        color: (0,0,0,.2)
+        text: '_________________________________________'
+        font_size: sp(18)
+        pos_hint: {"center_x":.5,"center_y":.5}
+
+
+    Label:
+        color: (0,0,0,.8)
+        text: 'Курс рублей к тенге'
+        font_size: sp(18)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.5,"center_y":.45}
+
+    TextInput:
+        id: ru
+        size_hint: (0.3, 0.025)
+        pos_hint: {'center_x':.17, 'top':.41}
+        multiline: 0
+        cursor_color: 0,0,0,1
+        foreground_color: 0.58,.58,.58,1
+        input_filter: 'float'
+
+    Label:
+        color: (0,0,0,.8)
+        text: 'рублей в тенге'
+        font_size: sp(16)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.5,"center_y":.395}
+
+    Button:
+        text: 'Перевести'
+        font_size: sp(16)
+        on_release: root.convert()
+        size_hint: (0.25, 0.05)
+        pos_hint: {'center_x':.8, 'center_y':.395}
+
+    Label:
+        id: con
+        text: ''
+        font_size: sp(18)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.5,"center_y":.35}
+
+
+    Label:
+        id: kurs
+        color: (0,0,0,.8)
+        text: ''
+        font_size: sp(18)
+        size_hint: (0.8, 0.05)
+        pos_hint: {"center_x":.5,"center_y":.2}
